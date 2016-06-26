@@ -2,11 +2,10 @@ package com.insightfullogic.java8.exercises.chapter4;
 
 import com.insightfullogic.java8.examples.chapter1.Artist;
 import com.insightfullogic.java8.examples.chapter1.SampleData;
-import org.junit.Assert;
 import org.junit.Test;
 
-import static junit.framework.Assert.assertEquals;
-import static junit.framework.Assert.assertNotNull;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 public class ArtistsTest {
 
@@ -26,7 +25,7 @@ public class ArtistsTest {
     @Test
     public void nameIndexInsideRange() {
         String artist = optionalExamples.getArtistName(0);
-        Assert.assertEquals("John Coltrane", artist);
+        assertEquals("John Coltrane", artist);
     }
 
     @Test

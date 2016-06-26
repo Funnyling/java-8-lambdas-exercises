@@ -9,7 +9,7 @@ import java.util.Set;
 import static com.insightfullogic.java8.examples.chapter1.SampleData.theBeatles;
 import static java.util.Collections.singletonList;
 import static java.util.stream.Collectors.toSet;
-import static junit.framework.Assert.assertEquals;
+import static org.junit.Assert.assertEquals;
 
 public class TestPerformance {
 
