@@ -13,7 +13,7 @@ public class FilterUsingReduceTest {
 
     @Test
     public void emptyList() {
-        assertFiltered(x -> false, Collections.<Object>emptyList(), Collections.<Object>emptyList());
+        assertFiltered(x -> false, Collections.emptyList(), Collections.emptyList());
     }
 
     @Test
@@ -23,12 +23,12 @@ public class FilterUsingReduceTest {
 
     @Test
     public void falseRemovesEverything() {
-        assertFiltered((Integer x) -> false, asList(1, 2, 3), asList());
+        assertFiltered((Integer x) -> false, asList(1, 2, 3), Collections.emptyList());
     }
 
     @Test
     public void filterPartOfList() {
-        assertFiltered((Integer x) -> x > 2, asList(1, 2, 3), asList(3));
+        assertFiltered((Integer x) -> x > 2, asList(1, 2, 3), Collections.singletonList(3));
     }
 
     private <I> void assertFiltered(Predicate<I> predicate, List<I> input, List<I> expectedOutput) {

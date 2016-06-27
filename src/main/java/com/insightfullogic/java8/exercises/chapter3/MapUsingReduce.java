@@ -13,7 +13,16 @@ import java.util.stream.Stream;
 public class MapUsingReduce {
 
     public static <I, O> List<O> map(Stream<I> stream, Function<I, O> mapper) {
-        return Exercises.replaceThisWithSolution();
+        final List<O> identity = new ArrayList<>();
+        return stream.reduce(identity, (acc, x) -> {
+            List<O> newAcc = new ArrayList<>(acc);
+            newAcc.add(mapper.apply(x));
+            return newAcc;
+        }, (List<O> left, List<O> right) -> {
+            List<O> newLeft = new ArrayList<>(left);
+            newLeft.addAll(right);
+            return newLeft;
+        });
     }
 
 }

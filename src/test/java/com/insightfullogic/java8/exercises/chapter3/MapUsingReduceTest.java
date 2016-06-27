@@ -13,7 +13,7 @@ public class MapUsingReduceTest {
 
     @Test
     public void emptyList() {
-        assertMapped(Function.<Object>identity(), Collections.<Object>emptyList(), Collections.<Object>emptyList());
+        assertMapped(Function.identity(), Collections.emptyList(), Collections.emptyList());
     }
 
     @Test

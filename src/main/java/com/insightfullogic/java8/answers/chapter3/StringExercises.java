@@ -15,6 +15,7 @@ public class StringExercises {
 
     // Question 8
     public static Optional<String> mostLowercaseString(List<String> strings) {
+        strings.stream().filter(String::isEmpty).count();
         return strings.stream()
                       .max(Comparator.comparing(StringExercises::countLowercaseLetters));
     }
